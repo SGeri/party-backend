@@ -17,7 +17,7 @@ connection.connect();
 
 router.post("/", (req, res) => {
   return connection.query(
-    "SELECT * FROM `tickets` WHERE `OrderID` = '" + req.body.key + "'",
+    "SELECT * FROM `tickets` WHERE `TicketKey` = '" + req.body.key + "'",
     function (error, results) {
       if (error) throw error;
 
