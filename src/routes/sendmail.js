@@ -4,6 +4,9 @@ import PDFDocument from "pdfkit";
 import bcrypt from "bcrypt";
 import qr from "qr-image";
 import mysql from "mysql";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const router = express.Router();
 
