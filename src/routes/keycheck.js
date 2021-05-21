@@ -22,7 +22,7 @@ router.post("/", (req, res) => {
       if (error) throw error;
 
       if (results.length > 0) {
-        res.json({ valid: true });
+        res.json({ valid: true, ticketType: results[0].TicketType });
       } else {
         res.json({ valid: false });
       }
