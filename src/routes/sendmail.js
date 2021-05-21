@@ -23,6 +23,8 @@ router.post("/", (req, res) => {
   const { id, billing } = req.body.data;
   const { items } = req.body;
 
+  console.log("New Order: " + id + "#");
+
   isRegisteredEntry(id, async function (registered) {
     if (registered) {
       res.json({ success: true });
